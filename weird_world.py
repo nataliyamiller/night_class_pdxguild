@@ -19,13 +19,13 @@ weird_world(word)
 def weird_world():
 	word = raw_input("please type a word (please no numbers): ")
 	word = word.lower()
-	if len(word) <= 0:
-		weird_world()
 	for letter in word:
-		if letter in ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9") and not letter.isalpha():
+		if letter.isalpha():
+			continue
+		else:
 			weird_world()
-
-	print word[1:] + word[0] + pig
-	print "Welcome to the Weird World"
+	else:
+		print word[1:] + word[0] + pig
+		print "Welcome to the Weird World"
 
 weird_world()
