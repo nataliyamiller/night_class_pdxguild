@@ -24,8 +24,8 @@ def weird_world():
 			continue
 		else:
 			weird_world()
-	else:
-		print word[1:] + word[0] + pig
-		print "Welcome to the Weird World"
+			
+	print word[1:] + word[0] + pig
+	print "Welcome to the Weird World"
 
 weird_world()
